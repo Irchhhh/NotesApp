@@ -47,7 +47,9 @@ extension NotesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell" , for: indexPath)
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "NoteCell" , for: indexPath
+        )
         let notes = notes[indexPath.row]
         
         cell.textLabel?.text = notes.title
@@ -56,10 +58,7 @@ extension NotesViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let note = notes[indexPath.row]
-        performSegue(withIdentifier: "show", sender: note)
-    }
+   
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         height
@@ -72,6 +71,7 @@ extension NotesViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+     
 }
 
 extension NotesViewController: AddNoteViewControllerDelegate {
