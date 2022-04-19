@@ -9,9 +9,9 @@ import UIKit
 
 protocol AddNoteViewControllerDelegate {
     func saveNote(_ note: Notes)
-    
 }
-class NotesViewController: UIViewController {
+
+ final class NotesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     

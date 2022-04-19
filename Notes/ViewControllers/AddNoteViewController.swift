@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddNoteViewController: UIViewController {
+final class AddNoteViewController: UIViewController {
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var titleTextField: UITextField!
